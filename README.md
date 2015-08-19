@@ -4,6 +4,8 @@ If your host machine is not a linux-based OS, please download VirtualBox and Vag
 
 This guide will be used to install and config docker on Macbook with a Virtual Linux Host OS of Ubuntu/trusty (VirtualBox+Vagrant)
 
+## Setup Virtual Machine
+
 + **Step 1**: Install Virtual Box - version 4.3.30 (https://www.virtualbox.org/wiki/Download_Old_Builds_4_3)
 
 + **Step 2**: Install Vagrant 1.7.4 (https://www.vagrantup.com/downloads.html)
@@ -46,4 +48,39 @@ config.vm.synced_folder "~/Source", "/var/www/html", :mount_options => ['dmode=7
 config.vm.synced_folder "~/DevOps", "/Devops"
 ```
 
+Reload vagrant to apply new config
 
+```
+vagrant reload
+```
+
+## Setup Docker on guest VM
+
++ **Step 1**: Log in to the guest VM and switch to root user
+
+```
+cd ~/VMS/ubuntu
+vagrant up
+vagrant ssh
+```
+
+When you are inside the virtual machine, switch to root user
+
+```
+sudo -s
+```
+
++ **Step 2**: Install Docker
+(https://docs.docker.com/installation/ubuntulinux/)
+
+```
+apt-get update
+apt-get install curl
+curl -sSL https://get.docker.com/ | sh
+```
+
+Check docker is installed correctly by typing
+
+```
+sudo docker run hello-world
+```
