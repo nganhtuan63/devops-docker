@@ -22,16 +22,16 @@ vagrant init ubuntu/trusty64; vagrant up --provider virtualbox
 
 + **Step 5**: Prepare folder structure
 
-++ Source code on my laptop: **~/Source**
+Source code on my laptop: **~/Source**
 
-++ DevOps on my laptop: **~/DevOps** (please clone the source from https://github.com/nganhtuan63/DevOps)
+DevOps on my laptop: **~/DevOps** (please clone the source from https://github.com/nganhtuan63/DevOps)
 
-++ Virtual Machines on my laptop: **~/VMS**
+Virtual Machines on my laptop: **~/VMS**
 
 
 + **Step 6**: Edit the Vagrantfile to config virtual machine
 
-⋅⋅⋅Setup the IP Address for the guest VM. I will use the address 192.168.33.99
+⋅⋅* Setup the IP Address for the guest VM. I will use the address 192.168.33.99
 
 ```
 # Create a private network, which allows host-only access to the machine
@@ -39,7 +39,7 @@ vagrant init ubuntu/trusty64; vagrant up --provider virtualbox
 config.vm.network "private_network", ip: "192.168.33.99"
 ```
 
-⋅⋅⋅Share additional folders to the guest VM
+⋅⋅* Share additional folders to the guest VM
 
 ```
 config.vm.synced_folder "~/Source", "/var/www/html", :mount_options => ['dmode=777', 'fmode=777']
