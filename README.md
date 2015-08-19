@@ -22,9 +22,12 @@ vagrant init ubuntu/trusty64; vagrant up --provider virtualbox
 
 + **Step 5**: Prepare folder structure
 
-⋅⋅⋅Source code on my laptop: **~/Source**
-⋅⋅⋅DevOps on my laptop: **~/DevOps** (please clone the source from https://github.com/nganhtuan63/DevOps)
-⋅⋅⋅Virtual Machines on my laptop: **~/VMS**
+++ Source code on my laptop: **~/Source**
+
+++ DevOps on my laptop: **~/DevOps** (please clone the source from https://github.com/nganhtuan63/DevOps)
+
+++ Virtual Machines on my laptop: **~/VMS**
+
 
 + **Step 6**: Edit the Vagrantfile to config virtual machine
 
