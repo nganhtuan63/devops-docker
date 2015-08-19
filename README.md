@@ -1,4 +1,4 @@
-#Setup Development Environment with Docker
+#Docker Tutorial - Setup Development Environment with Docker
 
 If your host machine is not a linux-based OS, please download VirtualBox and Vagrant to setup a Virtual Linux Host OS.
 
@@ -24,11 +24,11 @@ vagrant init ubuntu/trusty64; vagrant up --provider virtualbox
 
 + **Step 5**: Prepare folder structure
 ```
-Source code on my laptop: **~/Source**
+Source code on my laptop: ~/Source
 
-DevOps on my laptop: **~/DevOps** (please clone the source from https://github.com/nganhtuan63/DevOps)
+DevOps on my laptop: ~/DevOps (please clone the source from https://github.com/nganhtuan63/DevOps)
 
-Virtual Machines on my laptop: **~/VMS**
+Virtual Machines on my laptop: ~/VMS
 ```
 
 + **Step 6**: Edit the Vagrantfile to config virtual machine
@@ -115,5 +115,5 @@ cd /DevOps/docker
 /usr/local/bin/docker-compose up
 ```
 
-You will see a screen like this, which means all containers have been created succesfully
+You will see a screen like this which means all containers have been created succesfully
 
