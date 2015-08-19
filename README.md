@@ -91,3 +91,29 @@ sudo docker run hello-world
 curl -L https://github.com/docker/compose/releases/download/1.4.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 ```
+
+## Use docker to create development containers
+
++ **Step 1**: Build a custom phpcontainer images
+(This step is an example to demonstrate the steps of building an image from a Dockerfile)
+
+```
+cd /DevOps/docker/images/phpcomposer
+docker build -t phpcomposer:5.6 .
+```
+
+Check to see the newly created image
+
+```
+docker images
+```
+
++ **Step 2**: Create all containers with docker compose
+
+```
+cd /DevOps/docker
+/usr/local/bin/docker-compose up
+```
+
+You will see a screen like this, which means all containers have been created succesfully
+
