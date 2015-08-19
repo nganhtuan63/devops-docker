@@ -12,7 +12,7 @@ php:
   container_name: php
   volumes:
     - /DevOps/conf/php-fpm/php-fpm.conf:/usr/local/etc/php-fpm.conf
-    - /var/www/html:/var/www/html
+    - /var/www/html:/usr/share/nginx/html/
   links:
     - db
 
@@ -27,10 +27,3 @@ web:
     - /DevOps/conf/nginx:/etc/nginx/conf.d/
   links:
     - php
-
-app:
-  image: busybox
-  container_name: app
-  working_dir: /var/www/html
-  volumes:
-    - /var/www/html:/var/www/html/

@@ -6,13 +6,24 @@ http://www.itworld.com/article/2915530/virtualization/containers-vs-virtual-mach
 
 http://blog.smartbear.com/web-monitoring/why-containers-instead-of-hypervisors/
 
+https://blog.risingstack.com/operating-system-containers-vs-application-containers/
+
 What DEV needs to know: Require Linux Host OS. Container is a kind of virtual technology but is smaller and faster than VM Ware thanks to the use of shared HOST OS.
+
+Question: Container has an OS of the image or not?
 
 2. Install Docker
 
 + Install Vagrant: 1.4.7
 + Install Virtual Box: 4.3.30
 
+
++ Basic Docker:
+	- Image
+	- Container
+	- Port
+	- Volume
+	- Link
 
 + Install Vagrant Box Centos7
 
