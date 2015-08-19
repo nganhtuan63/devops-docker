@@ -15,17 +15,17 @@ mkdir ~/VMS
 mkdir ~/VMS/ubuntu
 ```
 
-3. Create an Ubuntu virtual machine
+4. Create an Ubuntu virtual machine
 
 ```
 cd VMS/ubuntu
 vagrant init ubuntu/trusty64; vagrant up --provider virtualbox
 ```
 
-4. Prepare folder structure
-
-Source code on my lap: *~/Source*
-DevOps on my lap: *~/DevOps* (please clone the source from https://github.com/nganhtuan63/DevOps)
-Virtual Machines on my lap: *~/VMS*
-
 5. Prepare folder structure
+
+- Source code on my lap: **~/Source**
+- DevOps on my lap: **~/DevOps** (please clone the source from https://github.com/nganhtuan63/DevOps)
+- Virtual Machines on my lap: **~/VMS**
+
+6. Prepare folder structure
