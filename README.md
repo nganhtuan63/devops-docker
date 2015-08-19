@@ -1,4 +1,4 @@
-Setup Development Environment with Docker
+#Setup Development Environment with Docker
 
 If your host machine is not a linux-based OS, please download VirtualBox and Vagrant to setup a Virtual Linux Host OS.
 
@@ -14,3 +14,18 @@ This guide will be used to install and config docker on Macbook with a Virtual L
 mkdir ~/VMS
 mkdir ~/VMS/ubuntu
 ```
+
+3. Create an Ubuntu virtual machine
+
+```
+cd VMS/ubuntu
+vagrant init ubuntu/trusty64; vagrant up --provider virtualbox
+```
+
+4. Prepare folder structure
+
+Source code on my lap: *~/Source*
+DevOps on my lap: *~/DevOps* (please clone the source from https://github.com/nganhtuan63/DevOps)
+Virtual Machines on my lap: *~/VMS*
+
+5. Prepare folder structure
