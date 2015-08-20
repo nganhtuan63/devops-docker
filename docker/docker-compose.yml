@@ -1,6 +1,6 @@
-msqyldb:
+mysqldb:
   image: tutum/mysql:5.6
-  container_name: db
+  container_name: mysqldb
   ports:
     - "3306:3306"
   volumes:
@@ -9,12 +9,20 @@ msqyldb:
 
 mariadb:
   image: tutum/mariadb:10.1
-  container_name: db
+  container_name: mariadb
   ports:
     - "3307:3306"
   volumes:
     - /var/lib/containers/data/mariadb:/var/lib/mysql
   env_file: ./env/mariadb.env
+
+redis:
+  image: redis
+  container_name: redis
+  ports:
+    - "6379:6379"
+  volumes:
+    - /var/lib/containers/data/redis:/data
 
 php:
   image: phpcomposer:5.6
@@ -23,7 +31,9 @@ php:
     - /DevOps/conf/php-fpm/php-fpm.conf:/usr/local/etc/php-fpm.conf
     - /var/www/html:/usr/share/nginx/html/
   links:
-    - db
+    - mysqldb
+    - redis
+    - mariadb
 
 web:
   image: nginx
