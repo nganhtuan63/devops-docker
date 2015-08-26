@@ -29,7 +29,7 @@ php:
   container_name: php
   volumes:
     - /DevOps/conf/php-fpm/php-fpm.conf:/usr/local/etc/php-fpm.conf
-    - /var/www/html:/usr/share/nginx/html/
+    - /var/www/html:/var/www/html/
   links:
     - mysqldb
     - redis
@@ -42,7 +42,7 @@ web:
     - "80:80"
     - "443:443"
   volumes:
-    - /var/www/html:/usr/share/nginx/html/
+    - /var/www/html:/var/www/html/
     - /DevOps/conf/nginx:/etc/nginx/conf.d/
   links:
     - php
