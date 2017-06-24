@@ -43,6 +43,15 @@ web:
     - "443:443"
   volumes:
     - /var/www/html:/var/www/html/
-    - /DevOps/conf/nginx:/etc/nginx/conf.d/
+    - /DevOps/conf/nginx/conf.d:/etc/nginx/conf.d/
+    - /DevOps/conf/nginx/nginx.conf:/etc/nginx/nginx.conf
   links:
     - php
+
+# go:
+#   image: golang:1.5
+#   container_name: go
+#   volumes:
+#     - /var/www/html:/var/www/html/
+#   ports:
+#     - "8080:8080"
